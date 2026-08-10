@@ -1,0 +1,230 @@
+/* ============================================================
+   0-tokens.css — Design Tokens (Single Source of Truth)
+   Referências: Apple, Stripe, Linear, Framer, Vercel
+   ============================================================ */
+
+:root {
+  /* ─── Color: Primary (Clinical Trust) ─── */
+  --color-primary-50:  #f0fdf4;
+  --color-primary-100: #dcfce7;
+  --color-primary-200: #bbf7d0;
+  --color-primary-300: #86efac;
+  --color-primary-400: #4ade80;
+  --color-primary-500: #22c55e;
+  --color-primary-600: #16a34a;
+  --color-primary-700: #15803d;
+  --color-primary-800: #166534;
+  --color-primary-900: #14532d;
+  --color-primary-950: #052e16;
+
+  /* ─── Color: Accent (Performance/Science) ─── */
+  --color-accent-50:  #f0f9ff;
+  --color-accent-100: #e0f2fe;
+  --color-accent-200: #bae6fd;
+  --color-accent-300: #7dd3fc;
+  --color-accent-400: #38bdf8;
+  --color-accent-500: #0ea5e9;
+  --color-accent-600: #0284c7;
+  --color-accent-700: #0369a1;
+  --color-accent-800: #075985;
+  --color-accent-900: #0c4a6e;
+  --color-accent-950: #082f49;
+
+  /* ─── Color: Neutral (Typography Hierarchy) ─── */
+  --color-gray-50:  #fafafa;
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #e5e5e5;
+  --color-gray-300: #d4d4d4;
+  --color-gray-400: #a3a3a3;
+  --color-gray-500: #737373;
+  --color-gray-600: #525252;
+  --color-gray-700: #404040;
+  --color-gray-800: #262626;
+  --color-gray-900: #171717;
+  --color-gray-950: #0a0a0a;
+
+  /* ─── Color: Semantic ─── */
+  --color-success: #16a34a;
+  --color-warning: #f59e0b;
+  --color-error:   #ef4444;
+  --color-trust:   #0ea5e9;
+  --color-info:    #0ea5e9;
+
+  /* ─── Typography ─── */
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  /* Fluid type scale (clamp) */
+  --text-display: clamp(2.5rem, 5vw + 1rem, 4rem);      /* Hero headline */
+  --text-h1:      clamp(2rem, 3vw + 0.5rem, 3rem);       /* Section titles */
+  --text-h2:      clamp(1.5rem, 2vw + 0.5rem, 2.25rem);  /* Subsection */
+  --text-h3:      1.25rem;                                /* Card titles */
+  --text-body-lg: 1.125rem;                               /* Lead paragraphs */
+  --text-body:    1rem;                                   /* Body default */
+  --text-sm:      0.875rem;                               /* Labels, captions */
+  --text-xs:      0.75rem;                                /* Legal, footnotes */
+
+  /* Line heights */
+  --leading-tight:   1.1;   /* Display, H1 */
+  --leading-snug:    1.35;  /* H2, H3 */
+  --leading-normal:  1.6;   /* Body */
+  --leading-relaxed: 1.7;   /* Body-lg, lead */
+
+  /* Font weights */
+  --weight-regular:   400;
+  --weight-medium:    500;
+  --weight-semibold:  600;
+  --weight-bold:      700;
+
+  /* ─── Spacing (8px Base System) ─── */
+  --space-1:  0.25rem;  /* 4px  */
+  --space-2:  0.5rem;   /* 8px  */
+  --space-3:  0.75rem;  /* 12px */
+  --space-4:  1rem;     /* 16px */
+  --space-5:  1.25rem;  /* 20px */
+  --space-6:  1.5rem;   /* 24px */
+  --space-8:  2rem;     /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+
+  /* ─── Layout Containers ─── */
+  --container-sm:  640px;   /* Mobile max */
+  --container-md:  768px;   /* Tablet */
+  --container-lg:  1024px;  /* Desktop */
+  --container-xl:  1280px;  /* Wide */
+  --container-2xl: 1440px;  /* Ultra-wide max content */
+
+  /* ─── Border Radius ─── */
+  --radius-sm:  0.375rem;  /* 6px  */
+  --radius-md:  0.5rem;    /* 8px  */
+  --radius-lg:  0.75rem;   /* 12px */
+  --radius-xl:  1rem;      /* 16px */
+  --radius-2xl: 1.5rem;    /* 24px */
+  --radius-full: 9999px;   /* Pill */
+
+  /* ─── Shadows ─── */
+  --shadow-sm:  0 1px 2px  rgba(0, 0, 0, 0.05);
+  --shadow-md:  0 4px 14px rgba(0, 0, 0, 0.08);
+  --shadow-lg:  0 20px 50px rgba(0, 0, 0, 0.08);
+  --shadow-xl:  0 25px 60px rgba(0, 0, 0, 0.12);
+
+  /* ─── Transitions ─── */
+  --ease-out:    cubic-bezier(0.4, 0, 0.2, 1);  /* Material */
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --t-fast:   150ms var(--ease-out);
+  --t-normal: 200ms var(--ease-out);
+  --t-slow:   300ms var(--ease-out);
+
+  /* ─── Breakpoints (Mobile-First) ─── */
+  --bp-sm:  640px;
+  --bp-md:  768px;
+  --bp-lg:  1024px;
+  --bp-xl:  1280px;
+  --bp-2xl: 1536px;
+
+  /* ─── Z-Index Scale ─── */
+  --z-dropdown: 100;
+  --z-sticky:   110;
+  --z-header:   120;
+  --z-modal:    130;
+  --z-popover:  140;
+  --z-toast:    150;
+  --z-tooltip:  160;
+
+  color-scheme: light;
+}
+
+/* ─── Dark Mode (Prefers-Color-Scheme) ───
+     Mantém identidade da marca; clareia tokens de texto para AA ─── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Neutros invertidos */
+    --color-gray-50:  #0a0a0a;
+    --color-gray-100: #171717;
+    --color-gray-200: #262626;
+    --color-gray-300: #404040;
+    --color-gray-400: #737373;
+    --color-gray-500: #a3a3a3;
+    --color-gray-600: #d4d4d4;
+    --color-gray-700: #e5e5e5;
+    --color-gray-800: #f5f5f5;
+    --color-gray-900: #fafafa;
+    --color-gray-950: #ffffff;
+
+    /* Primary: fundos continuam verdes-escuros (texto branco AA);
+       textos sobre dark usam tons claros separados */
+    --color-primary-50:  #052e16;
+    --color-primary-100: #14532d;
+    --color-primary-200: #4ade80;   /* Outline de foco + check sobre dark */
+    --color-primary-300: #22c55e;
+    --color-primary-400: #16a34a;
+    --color-primary-500: #22c55e;   /* Texto principal dark */
+    --color-primary-600: #15803d;   /* Fundos (botões, stepper, sticky) */
+    --color-primary-700: #166534;   /* Hover de fundos (escurece) */
+    --color-primary-800: #14532d;
+    --color-primary-900: #052e16;
+    --color-primary-950: #022c22;
+
+    /* Accent: clareado para texto sobre dark */
+    --color-accent-50:  #082f49;
+    --color-accent-100: #0c4a6e;
+    --color-accent-200: #075985;
+    --color-accent-300: #0369a1;
+    --color-accent-400: #0284c7;
+    --color-accent-500: #0ea5e9;
+    --color-accent-600: #38bdf8;
+    --color-accent-700: #7dd3fc;
+    --color-accent-800: #bae6fd;
+    --color-accent-900: #e0f2fe;
+    --color-accent-950: #f0f9ff;
+
+    /* Semantic adjustments */
+    --color-success: #22c55e;
+    --color-trust:   #38bdf8;
+    --color-info:    #38bdf8;
+
+    color-scheme: dark;
+  }
+
+  /* Component-level dark overrides para AA text contrast.
+     Nota: .stepper__number/.card__step/.btn-primary/.sticky-cta mantêm
+     texto branco sobre primary-600 (agora escuro) — não entram aqui. */
+  .section__eyebrow,
+  .section__title-accent,
+  .comparison__col--enzo li::before,
+  .faq__question::after,
+  .badge-success,
+  .btn-secondary,
+  .btn-ghost { color: var(--color-primary-500); }
+
+  .btn-secondary { border-color: var(--color-primary-500); }
+  .btn-secondary:hover,
+  .btn-ghost:hover {
+    color: var(--color-primary-500);
+    border-color: var(--color-primary-500);
+    background: var(--color-primary-50);
+  }
+
+  .site-footer__link:hover { color: var(--color-primary-200); }
+
+  .credential-list li::before {
+    background: var(--color-primary-100);
+    color: var(--color-primary-200);
+  }
+}
+
+/* ─── High Contrast Mode Support ─── */
+@media (prefers-contrast: more) {
+  :root {
+    --color-primary-600: #0d7a33;
+    --color-primary-700: #0a5f27;
+    --color-accent-600:  #016aa3;
+    --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.2);
+  }
+  .btn-primary { border: 2px solid currentColor; }
+  .card { border-width: 2px; }
+}

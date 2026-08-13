@@ -105,7 +105,7 @@ body.no-scroll { overflow: hidden; }
   .menu-toggle,
   .sticky-cta,
   .hero__visual,
-  .hero__card,
+  .hero__badge,
   .section--final-cta .btn,
   .whatsapp-float { display: none !important; }
   body { background: #fff; color: #000; }

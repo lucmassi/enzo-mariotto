@@ -4,6 +4,8 @@
 import { initCtaTracker } from "./tracking/ctaTracker.js";
 import { initScrollTracker } from "./tracking/scrollTracker.js";
 import { initPhoneTracker } from "./tracking/phoneTracker.js";
+import { initSiteChrome } from "./components/SiteChrome.js";
+import { initParallax } from "./components/Parallax.js";
 import { initReveal } from "./components/RevealObserver.js";
 // ExitIntent removed — replaced with floating WhatsApp button
 import { storage } from "./utils/storage.js";
@@ -32,10 +34,12 @@ import { storage } from "./utils/storage.js";
 
   document.addEventListener("DOMContentLoaded", function () {
     initUTMs();
+    initSiteChrome();
     initCtaTracker();
     initScrollTracker();
     initPhoneTracker();
     initYear();
     initReveal();
+    initParallax();
   });
 })();

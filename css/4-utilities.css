@@ -1,28 +1,46 @@
 /* ============================================================
-   4-utilities.css — Animations, Reveal on Scroll, Spacing Helpers
+   4-utilities.css — Keyframes, Reveal on Scroll, Spacing Helpers
    ============================================================ */
 
-/* ─── Keyframe Animations ─── */
+/* ─── Keyframes ─── */
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.animate-fade-up {
-  opacity: 0;
-  animation: fade-up 600ms var(--ease-out) forwards;
+@keyframes wa-pulse {
+  0%   { transform: scale(1);    opacity: 0.65; }
+  70%  { transform: scale(1.38); opacity: 0; }
+  100% { transform: scale(1.38); opacity: 0; }
 }
 
-/* Reveal on scroll (progressive enhancement via JS) */
+@keyframes faq-reveal {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  opacity: 0;
+  animation: fade-up 620ms var(--ease-out) forwards;
+}
+
+/* ─── Reveal on scroll (progressive enhancement via JS) ─── */
 .js .reveal {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 600ms var(--ease-out), transform 600ms var(--ease-out);
+  will-change: opacity, transform, filter;
+  transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out),
+              filter 700ms var(--ease-out);
+  transition-delay: calc(var(--reveal-index, 0) * 90ms);
 }
+
+.js .reveal.reveal--up    { transform: translateY(28px); }
+.js .reveal.reveal--blur  { transform: translateY(18px) scale(1.06); filter: blur(10px); }
+.js .reveal.reveal--scale { transform: scale(0.965); }
 
 .js .reveal.is-in-view {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+  filter: none;
 }
 
 /* ─── Spacing Helpers ─── */

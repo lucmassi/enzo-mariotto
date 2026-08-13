@@ -1,7 +1,7 @@
 /* ============================================================
    sw.js — Service Worker (Cache-First Performance Strategy)
    ============================================================ */
-const CACHE_NAME = "enm-cache-v3";
+const CACHE_NAME = "enm-cache-v6";
 const ASSETS = [
   "/",
   "/css/styles.css",
@@ -14,7 +14,8 @@ const ASSETS = [
   "/js/tracking/scrollTracker.js",
   "/js/tracking/phoneTracker.js",
   "/js/components/RevealObserver.js",
-  "/js/components/ExitIntent.js",
+  "/js/components/SiteChrome.js",
+  "/js/components/Parallax.js",
   "/assets/logo/logo-preto.png",
   "/assets/logo/logo-branco.png",
   "/assets/hero/hero-480.webp",

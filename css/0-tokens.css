@@ -1,0 +1,172 @@
+/* ============================================================
+   0-tokens.css — Design Tokens (Single Source of Truth)
+   Redesign Premium: grafite · preto suave · chumbo · off-white
+   destaque em verde esmeralda profundo.
+   Referências: Aesop, Stripe, Linear, Vercel, On Running
+   ============================================================ */
+
+:root {
+  /* ─── Color: Primary (Deep Emerald) ─── */
+  --color-primary-50:  #edf4f0;
+  --color-primary-100: #d7e7df;
+  --color-primary-200: #aed2c0;
+  --color-primary-300: #7eb49b;
+  --color-primary-400: #44946e;
+  --color-primary-500: #227a51;
+  --color-primary-600: #166a42;   /* primary action — esmeralda profundo */
+  --color-primary-700: #125337;
+  --color-primary-800: #0e402c;
+  --color-primary-900: #0a2f21;
+  --color-primary-950: #061e15;
+
+  /* ─── Color: Accent (Science / Performance) ─── */
+  --color-accent-50:  #eef4f6;
+  --color-accent-100: #d7e5ea;
+  --color-accent-200: #abc8d3;
+  --color-accent-300: #76a3b2;
+  --color-accent-400: #3f7c90;
+  --color-accent-500: #226173;
+  --color-accent-600: #14536a;
+  --color-accent-700: #114358;
+  --color-accent-800: #0c3445;
+  --color-accent-900: #082734;
+  --color-accent-950: #051a23;
+
+  /* ─── Color: Neutral (off-white → grafite / soft black) ─── */
+  --color-gray-50:  #fafaf8;   /* off-white */
+  --color-gray-100: #f3f2ef;
+  --color-gray-200: #e5e3de;   /* lead claro */
+  --color-gray-300: #cfccc5;   /* lead */
+  --color-gray-400: #a19e96;
+  --color-gray-500: #75726a;
+  --color-gray-600: #57544d;   /* corpo */
+  --color-gray-700: #413e38;   /* grafite */
+  --color-gray-800: #2a2824;
+  --color-gray-900: #1a1916;
+  --color-gray-950: #100f0d;   /* preto suave */
+
+  /* ─── Surfaces ─── */
+  --surface-light:  var(--color-gray-50);
+  --surface-dark:   #141311;   /* dark sections */
+  --surface-dark-2: #1b1a17;
+  --ink:            var(--color-gray-950);
+  --muted:          var(--color-gray-500);
+  --line-light:     var(--color-gray-200);
+  --line-dark:      rgba(255, 255, 255, 0.08);
+
+  /* ─── Color: Semantic ─── */
+  --color-success: var(--color-primary-500);
+  --color-warning: #9a7b2e;
+  --color-error:   #b4503f;    /* terracota apagado para contraste editorial */
+  --color-trust:   var(--color-accent-500);
+  --color-info:    var(--color-accent-500);
+
+  /* ─── Typography ─── */
+  --font-display: "Syne", "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  /* Fluid type scale (clamp) */
+  --text-display: clamp(2.5rem, 4.5vw + 1rem, 4.5rem);  /* Hero headline */
+  --text-h1:      clamp(2rem, 2.6vw + 0.75rem, 3rem);    /* Section titles */
+  --text-h2:      clamp(1.375rem, 1.4vw + 0.5rem, 1.875rem);
+  --text-h3:      1.25rem;                                /* Card titles */
+  --text-body-lg: 1.125rem;
+  --text-body:    1rem;
+  --text-sm:      0.875rem;
+  --text-xs:      0.75rem;
+  --text-eyebrow: 0.8125rem;
+
+  /* Line heights */
+  --leading-display: 0.98;   /* Syne display */
+  --leading-tight:   1.06;
+  --leading-snug:    1.3;
+  --leading-normal:  1.6;
+  --leading-relaxed: 1.7;
+
+  /* Font weights */
+  --weight-regular:   400;
+  --weight-medium:    500;
+  --weight-semibold:  600;
+  --weight-bold:      700;
+  --weight-extrabold: 800;
+
+  /* ─── Spacing (8px Base System) ─── */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-28: 7rem;
+
+  /* ─── Layout Containers ─── */
+  --container-sm:  640px;
+  --container-md:  820px;
+  --container-lg:  1024px;
+  --container-xl:  1280px;
+  --container-2xl: 1400px;
+
+  /* ─── Border Radius ─── */
+  --radius-sm:  0.375rem;
+  --radius-md:  0.625rem;
+  --radius-lg:  0.875rem;
+  --radius-xl:  1.25rem;
+  --radius-2xl: 1.75rem;
+  --radius-full: 9999px;
+
+  /* ─── Shadows ─── */
+  --shadow-sm:   0 1px 2px  rgba(16, 15, 13, 0.06);
+  --shadow-md:   0 6px 18px rgba(16, 15, 13, 0.08);
+  --shadow-lg:   0 24px 60px rgba(16, 15, 13, 0.14);
+  --shadow-xl:   0 30px 70px rgba(16, 15, 13, 0.2);
+  --shadow-emerald: 0 10px 30px rgba(22, 106, 66, 0.32);
+
+  /* ─── Transitions ─── */
+  --ease-out:    cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.3, 0.4, 1);
+  --t-fast:    160ms var(--ease-out);
+  --t-normal:  260ms var(--ease-out);
+  --t-slow:    480ms var(--ease-out);
+
+  /* ─── Breakpoints (Mobile-First) ─── */
+  --bp-sm:  640px;
+  --bp-md:  768px;
+  --bp-lg:  1024px;
+  --bp-xl:  1280px;
+  --bp-2xl: 1536px;
+
+  /* ─── Z-Index Scale ─── */
+  --z-dropdown: 100;
+  --z-sticky:   110;
+  --z-header:   120;
+  --z-modal:    130;
+  --z-popover:  140;
+  --z-toast:    150;
+  --z-tooltip:  160;
+
+  /* Header height (usado para compensar o header fixo) */
+  --header-h: 4.25rem;
+
+  color-scheme: light;
+}
+
+/* ─── High Contrast Mode Support ─── */
+@media (prefers-contrast: more) {
+  :root {
+    --color-primary-600: #0f5c36;
+    --color-primary-700: #0c4a2b;
+    --shadow-md: 0 6px 18px rgba(16, 15, 13, 0.16);
+    --shadow-lg: 0 24px 60px rgba(16, 15, 13, 0.24);
+  }
+  .btn-primary,
+  .card,
+  .faq__item,
+  .comparison__col { border-width: 2px; }
+}

@@ -1,10 +1,15 @@
 /* ============================================================
    sw.js — Service Worker (Cache-First Performance Strategy)
    ============================================================ */
-const CACHE_NAME = "enm-cache-v6";
+const CACHE_NAME = "enm-cache-v7";
 const ASSETS = [
   "/",
   "/css/styles.css",
+  "/css/0-tokens.css",
+  "/css/1-base.css",
+  "/css/2-components.css",
+  "/css/3-layout.css",
+  "/css/4-utilities.css",
   "/js/main.js",
   "/js/config.js",
   "/js/utils/dom.js",

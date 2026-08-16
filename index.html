@@ -276,6 +276,19 @@
     .icon-chip svg { width: 1.35rem; height: 1.35rem; }
     .icon { width: 1.25em; height: 1.25em; flex-shrink: 0; }
 
+    @media (max-width: 1023px) {
+      .hero__grid { grid-template-columns: 1fr; gap: 0; }
+      .hero__content { display: contents; }
+      .hero__eyebrow { order: 1; }
+      .hero__headline { order: 2; }
+      .hero__visual { order: 3; margin-top: 1.5rem; margin-bottom: 1.5rem; }
+      .hero__subheadline { order: 4; }
+      .hero__chips { order: 5; }
+      .hero__actions { order: 6; }
+      .hero__locations { order: 7; }
+      .hero__microcopy { order: 8; }
+    }
+
     @media (min-width: 1024px) {
       .hero__grid { grid-template-columns: 1.05fr 0.85fr; align-items: center; min-height: 78vh; gap: 4.5rem; }
       .hero__visual { margin-top: 2rem; }
